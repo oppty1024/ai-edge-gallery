@@ -1,4 +1,4 @@
-package com.example.oppty1024.ai_edge_gallery.ui.screens
+package com.example.oppty1024.ai_edge_gallery.feature.chat.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.oppty1024.ai_edge_gallery.ui.theme.AIEdgeGalleryTheme
 
 @Composable
 fun ChatScreen(
@@ -35,7 +34,5 @@ fun ChatScreen(
 @Preview(showBackground = true)
 @Composable
 private fun ChatScreenPreview() {
-    AIEdgeGalleryTheme {
-        ChatScreen()
-    }
+    ChatScreen()
 }

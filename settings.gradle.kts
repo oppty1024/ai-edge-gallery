@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AIEdgeGallery"
 include(":app")
+include(":feature:chat")

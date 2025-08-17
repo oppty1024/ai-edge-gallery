@@ -15,7 +15,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.oppty1024.ai_edge_gallery.navigation.BottomNavItem
 import com.example.oppty1024.ai_edge_gallery.ui.components.BottomNavigationBar
-import com.example.oppty1024.ai_edge_gallery.ui.screens.ChatScreen
+import com.example.oppty1024.ai_edge_gallery.feature.chat.ui.ChatScreen
 import com.example.oppty1024.ai_edge_gallery.ui.screens.MoreScreen
 import com.example.oppty1024.ai_edge_gallery.ui.screens.TodoScreen
 import com.example.oppty1024.ai_edge_gallery.ui.theme.AIEdgeGalleryTheme

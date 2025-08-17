@@ -1,20 +1,16 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.example.oppty1024.ai_edge_gallery"
+    namespace = "com.example.oppty1024.ai_edge_gallery.feature.chat"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.oppty1024.ai_edge_gallery"
         minSdk = 26
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
-
+        
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -27,25 +23,24 @@ android {
             )
         }
     }
+    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    
     kotlinOptions {
         jvmTarget = "11"
     }
+    
     buildFeatures {
         compose = true
     }
 }
 
 dependencies {
-    // Feature modules
-    implementation(project(":feature:chat"))
-    
     implementation(libs.androidx.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
-    implementation(libs.activity.compose)
     
     // Compose BOM
     implementation(platform(libs.compose.bom))
