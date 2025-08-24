@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -55,6 +57,20 @@ dependencies {
     
     // ViewModel
     implementation(libs.lifecycle.viewmodel.compose)
+    
+    // Hilt for dependency injection
+    implementation("com.google.dagger:hilt-android:2.48")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    ksp("com.google.dagger:hilt-android-compiler:2.48")
+    
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    
+    // MediaPipe AI tasks for LLM inference
+    implementation("com.google.mediapipe:tasks-genai:0.10.27")
+    
+    // Gson for JSON parsing
+    implementation("com.google.code.gson:gson:2.10.1")
     
     // Testing
     testImplementation(libs.junit)

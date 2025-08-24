@@ -1,0 +1,18 @@
+# 演示模型信息
+
+这是一个演示目录，用于展示AI Edge Gallery Chat模块的模型管理功能。
+
+## 如何添加真实模型：
+
+1. 将模型文件（.bin, .tflite, .gguf格式）放置在以下目录：
+   - 内部存储：app/src/main/assets/models/
+   - 外部存储：/Android/data/com.example.oppty1024.ai_edge_gallery/files/models/
+
+2. 推荐的轻量级模型：
+   - Gemma 2B: gemma-2b-it-cpu-int4.bin
+   - Phi-3 Mini: phi-3-mini-4k-instruct-cpu.bin
+   - Llama 3.2 1B: llama-3.2-1b-instruct-cpu.bin
+
+3. 模型会在应用启动时自动扫描和加载。
+
+注意：此演示不包含实际的模型文件，需要用户自行下载和添加。

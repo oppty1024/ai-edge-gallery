@@ -19,7 +19,9 @@ import com.example.oppty1024.ai_edge_gallery.feature.chat.ui.ChatScreen
 import com.example.oppty1024.ai_edge_gallery.ui.screens.MoreScreen
 import com.example.oppty1024.ai_edge_gallery.ui.screens.TodoScreen
 import com.example.oppty1024.ai_edge_gallery.ui.theme.AIEdgeGalleryTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

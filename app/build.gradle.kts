@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.android)
 }
 
 android {
@@ -40,7 +42,6 @@ android {
 }
 
 dependencies {
-    // Feature modules
     implementation(project(":feature:chat"))
     
     implementation(libs.androidx.core.ktx)
@@ -60,6 +61,11 @@ dependencies {
     
     // ViewModel
     implementation(libs.lifecycle.viewmodel.compose)
+    
+    // Hilt for dependency injection
+    implementation("com.google.dagger:hilt-android:2.48")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    ksp("com.google.dagger:hilt-android-compiler:2.48")
     
     // Testing
     testImplementation(libs.junit)
